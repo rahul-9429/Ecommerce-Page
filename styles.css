@@ -1,8 +1,50 @@
+/* Hide side scroll buttons by default */
+.prev-btn,
+.next-btn {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-scroll {
+        overflow-x: auto; /* Allow horizontal scrolling on mobile */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    .product-scroll::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+    /* Show side scroll buttons on mobile */
+    .prev-btn,
+    .next-btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 1001; /* Ensure buttons appear above the content */
+    }
+    .prev-btn {
+        left: 10px;
+    }
+    .next-btn {
+        right: 10px;
+    }
+}
+
+/* Other CSS styles... */
 body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: #f4f4f4; */
     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     color: #333;
     scroll-behavior: smooth;
@@ -13,8 +55,7 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-/*     background-color: #fff; */
-     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
+    background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -28,13 +69,11 @@ header .logo h1 {
 }
 
 header .menu {
-/*      background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     display: flex;
     gap: 20px;
 }
 
 header .menu a {
-/*     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
@@ -48,7 +87,6 @@ header .menu a i {
 
 header .menu a:hover {
     color: #fff;
-/*      background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     background-color: #007bff;
     border-radius: 5px;
 }
@@ -67,7 +105,6 @@ header .menu a:hover {
 
 .about-section {
     padding: 50px 0;
-    /* background-color: #fff; */
     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -120,16 +157,14 @@ header .menu a:hover {
 
 .product-scroll {
     display: flex;
-    overflow-x: auto;
-    padding: 20px 0;
     gap: 10px;
-    scrollbar-width: none; /* For Firefox */
+    padding: 20px 0;
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
-    cursor: grab;
 }
 
 .product-scroll::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    display: none;
 }
 
 .product {
@@ -168,15 +203,6 @@ header .menu a:hover {
     color: #666;
 }
 
-.product .stars {
-    color: #f39c12;
-}
-
-.product .reviews {
-    font-size: 0.9em;
-    color: #666;
-}
-
 .product:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -194,176 +220,8 @@ header .menu a:hover {
     margin-bottom: 20px;
 }
 
-contact-section p {
+.contact-section p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #666;
-}
-
-/* Disable text selection */
-body {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-/* Add scrolling option */
-.product-scroll {
-    /* Remaining styles */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-}
-
-.product-scroll::-webkit-scrollbar {
-    display: none; /* Hide horizontal scrollbar */
-}
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.why-choose-us,
-.community {
-    margin-top: 40px;
-}
-
-.why-choose-us h2,
-.community h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.why-choose-us .list,
-.community .list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.why-choose-us .list li,
-.community .list li {
-    margin-bottom: 10px;
-}
-
-.why-choose-us .list li strong,
-.community .list li strong {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.why-choose-us .list li p,
-.community .list li p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.why-choose-us .list li:last-child,
-.community .list li:last-child {
-    margin-bottom: 0;
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Adjust font size for better readability on smaller screens */
-    }
-    header .menu {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 10px;
-    }
-    header .menu a {
-        padding: 10px; /* Increase padding for better touchability */
-    }
-    .container {
-        width: 90%;
-        margin: 20px auto;
-        display: grid;
-        place-items: center; /* Center the content within the container */
-    }
-    .product-scroll {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        scrollbar-width: none; /* For Firefox */
-        scroll-snap-type: x mandatory;
-    }
-    .product {
-        width: 200px;
-        margin: 0 auto; /* Center the product within the container */
-    }
-    .about-section .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-section .about-image img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.2em; /* Decrease logo font size */
-    }
-    header .menu a {
-        font-size: 0.2em; /* Decrease menu item font size */
-    }
-    .product {
-        width: 150px;
-    }
-    .product h3 {
-        font-size: 1em;
-    }
-    .about-section h2 {
-        font-size: 1.2em;
-    }
-    .about-section p {
-        font-size: 0.9em;
-    }
-.options {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Add spacing between buttons */
-    }
-    .options button {
-        width: 100%; /* Make buttons full width */
-    }
-    .options button {
-        padding: 12px; /* Adjust padding for better touchability */
-        font-size: 0.9em; /* Decrease font size for better fit */
-    }
-}
-
-/* Make content in containers fixed and minimal */
-.container {
-    max-width: 90%; /* Limit container width for better readability */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    margin: 20px auto;
 }
