@@ -13,7 +13,8 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
+/*     background-color: #fff; */
+     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -26,7 +27,7 @@ header .logo h1 {
 }
 
 header .menu {
-     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
+/*      background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     display: flex;
     gap: 20px;
 }
@@ -45,8 +46,8 @@ header .menu a i {
 }
 
 header .menu a:hover {
-/*     color: #fff; */
-     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
+    color: #fff;
+/*      background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     background-color: #007bff;
     border-radius: 5px;
 }
