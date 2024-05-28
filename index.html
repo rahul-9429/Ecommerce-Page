@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* Move these styles to the top */
+        /* Hide side scroll buttons by default */
+        .prev-btn,
+        .next-btn {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-scroll {
+                overflow-x: auto; /* Allow horizontal scrolling on mobile */
+                scrollbar-width: none; /* Hide scrollbar for Firefox */
+            }
+            /* .product-scroll::-webkit-scrollbar {
+                display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+            } */
+            /* Show side scroll buttons on mobile */
+            .prev-btn,
+            .next-btn {
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                z-index: 1001; /* Ensure buttons appear above the content */
+            }
+            .prev-btn {
+                left: 10px;
+            }
+            .next-btn {
+                right: 10px;
+            }
+        }
+
+        /* Other CSS styles... */
+        .body{
+            color:black !important;
+        }
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -15,7 +62,8 @@
         }
     
         .product {
-            width: calc(25% - 20px); /* Adjust width based on the number of products per row */
+            max-height: ;
+            width: 10%; /* Adjust width based on the number of products per row */
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
@@ -53,9 +101,24 @@
         }
     
         .options button:hover {
-            background-color: #007bff;
             color: #fff;
         }
+        .product-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden; /* Ensure vertical scrolling is hidden */
+    max-width: 100%; /* Ensure the wrapper doesn't overflow horizontally */
+    padding-bottom: 20px; /* Add some padding to prevent the last item from being partially hidden */
+}
+
+.product-scroll {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    width: max-content; /* Ensure the width of the content is equal to its intrinsic width */
+}
+
+/* The rest of your CSS styles for product cards and buttons */
+
     </style>
 </head>
 <body>
@@ -63,6 +126,11 @@
         <nav>
             <div class="logo">
                 <h1>CaptureIt</h1>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
             <div class="menu">
                 <a href="#home">Home</a>
@@ -194,11 +262,24 @@
     </div>
     <div class="scroll-btn next-btn">&gt;</div>
 </div>
-        
+    
+
+    <div class="scroll-btn next-btn">&gt;</div>
+    </div>
     <div id="contact" class="contact-section">
         <h2>Contact Us</h2>
         <p>If you have any questions, feel free to reach out to us at @captureIt.in</p>
     </div>
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+
+    </script>
 </body>
 </html>
