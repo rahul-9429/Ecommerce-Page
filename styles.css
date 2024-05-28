@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* background-color: #f4f4f4; */
-    background-image: url(assests/paul-green-mln2ExJIkfc-unsplash.jpg);
+    background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     color: #333;
     scroll-behavior: smooth;
 }
@@ -63,7 +63,7 @@ header .menu a:hover {
 .about-section {
     padding: 50px 0;
     /* background-color: #fff; */
-    background-image: url(assests/paul-green-mln2ExJIkfc-unsplash.jpg);
+    background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
