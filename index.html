@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    
+        .product {
+            width: calc(25% - 20px); /* Adjust width based on the number of products per row */
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add spacing between products */
+        }
+    
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    
+        .product p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .options button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .options button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>CaptureIt</h1>
+            </div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#"><i class="fas fa-heart"></i> Favorites</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </div>
+        </nav>
+    </header>
+    <div id="home" class="home-section">
+        <h2>Welcome to CaptureIt</h2>
+    </div>
+    <div id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to our CaptureIt, where we offer the finest cameras and photography equipment to help you capture life's most precious moments. Our products are curated to meet the needs of both amateur and professional photographers, ensuring you have the best tools at your disposal.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/600x400" alt="About Us">
+            </div>
+        </div>
+
+    </div>
+    <!-- </div> -->
+
+    <div id="products" class="container">
+    <h2 style="color: #fff;">Photography Accessories</h2>
+    <div class="scroll-btn prev-btn">&lt;</div>
+    <div class="product-scroll">
+        <div class="product">
+            <img src="assests/pexels-pixabay-414781.jpg" alt="Camera Lens">
+            <h3>Professional Camera Lens</h3>
+            <p>₹7,500</p>
+            <p class="description">High-quality lens for capturing stunning images with clarity and detail.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="assests/pexels-pok-rie-33563-305086.jpg" alt="Tripod">
+            <h3>Professional Tripod</h3>
+            <p>₹3,500</p>
+            <p class="description">Sturdy tripod for stable shots and long exposure photography.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="assests/bag.jpg" alt="Camera Bag">
+            <h3>Camera Bag</h3>
+            <p>₹500</p>
+            <p class="description">Durable and spacious bag to carry your camera and accessories.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Strap">
+            <h3>Camera Strap</h3>
+            <p>₹150</p>
+            <p class="description">Comfortable and adjustable strap for carrying your camera.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Memory Card">
+            <h3>Memory Card</h3>
+            <p>₹200</p>
+            <p class="description">High-speed memory card for storing your photos and videos.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Cleaning Kit">
+            <h3>Camera Cleaning Kit</h3>
+            <p>₹300</p>
+            <p class="description">Essential kit for keeping your camera and lenses clean and dust-free.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Remote Shutter">
+            <h3>Camera Remote Shutter</h3>
+            <p>₹100</p>
+            <p class="description">Wireless remote shutter for convenient hands-free photography.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Lens Cleaner">
+            <h3>Camera Lens Cleaner</h3>
+            <p>₹50</p>
+            <p class="description">Compact and portable lens cleaner for maintaining optical clarity.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+
+    <div class="scroll-btn next-btn">&gt;</div>
+    </div>
+    <div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us at @captureIt.in</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
