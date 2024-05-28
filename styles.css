@@ -3,17 +3,32 @@
 .next-btn {
     display: none;
 }
+.product-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden; 
+    max-width: 100%;  
+    padding-bottom: 20px;  
+}
+
+.product-scroll {
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+    width: max-content;  
+}
+
+ 
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-scroll {
-        overflow-x: auto; /* Allow horizontal scrolling on mobile */
-        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        overflow-x: auto;  
+        scrollbar-width: none;
     }
     .product-scroll::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        display: none; 
     }
-    /* Show side scroll buttons on mobile */
+    
     .prev-btn,
     .next-btn {
         display: block;
