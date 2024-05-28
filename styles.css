@@ -345,6 +345,17 @@ body {
     .about-section p {
         font-size: 0.9em;
     }
+.options {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+    .options button {
+        width: 100%; /* Make buttons full width */
+    }
+    .options button {
+        padding: 12px; /* Adjust padding for better touchability */
+        font-size: 0.9em; /* Decrease font size for better fit */
+    }
 }
 
 /* Make content in containers fixed and minimal */
