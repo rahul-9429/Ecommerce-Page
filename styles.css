@@ -26,11 +26,13 @@ header .logo h1 {
 }
 
 header .menu {
+     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     display: flex;
     gap: 20px;
 }
 
 header .menu a {
+/*     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg); */
     color: #333;
     text-decoration: none;
     font-size: 1.2em;
@@ -43,7 +45,8 @@ header .menu a i {
 }
 
 header .menu a:hover {
-    color: #fff;
+/*     color: #fff; */
+     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
     background-color: #007bff;
     border-radius: 5px;
 }
