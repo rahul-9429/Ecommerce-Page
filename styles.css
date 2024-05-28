@@ -174,8 +174,8 @@ header .menu a:hover {
     display: flex;
     gap: 10px;
     padding: 20px 0;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+/*     scrollbar-width: none;
+    scroll-snap-type: x mandatory; */
 }
 
 .product-scroll::-webkit-scrollbar {
