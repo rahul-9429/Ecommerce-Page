@@ -198,45 +198,7 @@ contact-section p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #666;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product {
-        width: 150px;
-    }
-    .about-section .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-section .about-text {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.5em;
-    }
-    header .menu a {
-        font-size: 1em;
-    }
-    .product {
-        width: 120px;
-    }
-    .product h3 {
-        font-size: 1em;
-    }
-    .about-section h2 {
-        font-size: 1.5em;
-    }
-    .about-section p {
-        font-size: 0.9em;
-    }
-    .about-section .about-image img {
-        max-width: 100%;
-    }
-}
+}
 
 /* Disable text selection */
 body {
@@ -321,5 +283,76 @@ body {
 .why-choose-us .list li:last-child,
 .community .list li:last-child {
     margin-bottom: 0;
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    }
+    header .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px;
+    }
+    header .menu a {
+        padding: 10px; /* Increase padding for better touchability */
+    }
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        place-items: center; /* Center the content within the container */
+    }
+    .product-scroll {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        scrollbar-width: none; /* For Firefox */
+        scroll-snap-type: x mandatory;
+    }
+    .product {
+        width: 200px;
+        margin: 0 auto; /* Center the product within the container */
+    }
+    .about-section .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-section .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.2em; /* Decrease logo font size */
+    }
+    header .menu a {
+        font-size: 0.9em; /* Decrease menu item font size */
+    }
+    .product {
+        width: 150px;
+    }
+    .product h3 {
+        font-size: 1em;
+    }
+    .about-section h2 {
+        font-size: 1.2em;
+    }
+    .about-section p {
+        font-size: 0.9em;
+    }
+}
+
+/* Make content in containers fixed and minimal */
+.container {
+    max-width: 90%; /* Limit container width for better readability */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 20px auto;
+}
