@@ -3,18 +3,18 @@
 .next-btn {
     display: none;
 }
+
 .menu-toggle {
-    display: none;  
+    display: block;
     cursor: pointer;
 }
+
 .bar {
     width: 25px;
     height: 3px;
     background-color: #ffffff;
     margin: 5px 0;
 }
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-scroll {
@@ -49,11 +49,10 @@
     .next-btn {
         right: 10px;
     }
-    .menu {
-        display: none;  
+     .menu {
+        display: none; /* Hide the menu by default on small screens */
         flex-direction: column;
         gap: 10px;
-       
         position: absolute;
         top: 100%;
         left: 0;
@@ -63,11 +62,10 @@
     .menu.active {
         display: flex; /* Show the menu when active */
     }
+
     .menu-toggle {
-        display: block; /* Show the toggle on small screens */
         margin-right: 20px;
     }
-
 }
 
 /* Other CSS styles... */
