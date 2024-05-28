@@ -3,30 +3,15 @@
 .next-btn {
     display: none;
 }
-.product-scroll-wrapper {
-    overflow-x: auto;
-    overflow-y: hidden; 
-    max-width: 100%;  
-    padding-bottom: 20px;  
-}
-
-.product-scroll {
-    display: flex;
-    gap: 10px;
-    padding: 20px 0;
-    width: max-content;  
-}
-
- 
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-scroll {
         overflow-x: auto;  
-        scrollbar-width: none;
+        scrollbar-width: none; 
     }
     .product-scroll::-webkit-scrollbar {
-        display: none; 
+        display: none;  
     }
     
     .prev-btn,
@@ -61,7 +46,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(assets/paul-green-mln2ExJIkfc-unsplash.jpg);
-    color: #333;
+    color: #000000 !important;
     scroll-behavior: smooth;
 }
 
@@ -171,11 +156,13 @@ header .menu a:hover {
 }
 
 .product-scroll {
+    
     display: flex;
     gap: 10px;
     padding: 20px 0;
-/*     scrollbar-width: none;
-    scroll-snap-type: x mandatory; */
+    width: 100%;
+    /* scrollbar-width: none; */
+    /* scroll-snap-type: x mandatory; */
 }
 
 .product-scroll::-webkit-scrollbar {
