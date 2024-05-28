@@ -4,149 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Product Page</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #000;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .menu-toggle {
+        .prev-btn,
+        .next-btn {
             display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .bar {
-            height: 3px;
-            width: 25px;
-            background-color: #fff;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .menu a:hover {
-            color: #ddd;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
+            .product-scroll {
+                overflow-x: auto; /* Allow horizontal scrolling on mobile */
+                scrollbar-width: none; /* Hide scrollbar for Firefox */
             }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-        }
-
-        /* Product Styles */
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product {
-            width: 100%;
-            max-width: 200px;
-            background-color: #f9f9f9;
-            color: #000;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .product img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .product h3 {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .product p {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .options button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .options button:hover {
-            background-color: #ddd;
-            color: #000;
-        }
-
-        .product-scroll-wrapper {
-            overflow-x: auto;
-            overflow-y: hidden;
-            max-width: 100%;
-            padding-bottom: 20px;
-            position: relative;
-        }
-
-        .product-scroll {
-            display: flex;
-            gap: 10px;
-            padding: 20px;
-            width: max-content;
-        }
-
-        .scroll-btn {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
+            /* .product-scroll::-webkit-scrollbar {
+                display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+            } */
+            /* Show side scroll buttons on mobile */
             .prev-btn,
             .next-btn {
                 display: block;
@@ -163,7 +39,7 @@
                 justify-content: center;
                 cursor: pointer;
                 transition: background-color 0.3s;
-                z-index: 1001;
+                z-index: 1001; /* Ensure buttons appear above the content */
             }
             .prev-btn {
                 left: 10px;
@@ -172,6 +48,76 @@
                 right: 10px;
             }
         }
+
+        /* Other CSS styles... */
+        .body{
+            color:black !important;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    
+        .product {
+            max-height: ;
+            width: 10%; /* Adjust width based on the number of products per row */
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add spacing between products */
+        }
+    
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    
+        .product p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .options button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .options button:hover {
+            color: #fff;
+        }
+        .product-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden; /* Ensure vertical scrolling is hidden */
+    max-width: 100%; /* Ensure the wrapper doesn't overflow horizontally */
+    padding-bottom: 20px; /* Add some padding to prevent the last item from being partially hidden */
+}
+
+.product-scroll {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    width: max-content; /* Ensure the width of the content is equal to its intrinsic width */
+}
+
+/* The rest of your CSS styles for product cards and buttons */
+
     </style>
 </head>
 <body>
@@ -180,11 +126,12 @@
             <div class="logo">
                 <h1>CaptureIt</h1>
             </div>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+           <div class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
             <div class="menu">
                 <a href="#home">Home</a>
                 <a href="#about">About Us</a>
@@ -202,39 +149,137 @@
         <div class="about-content">
             <div class="about-text">
                 <h2>About Us</h2>
-                <p>Welcome to CaptureIt, where we offer the finest cameras and photography equipment to help you capture life's most precious moments. Our products are curated to meet the needs of both amateur and professional photographers, ensuring you have the best tools at your disposal.</p>
+                <p>Welcome to our CaptureIt, where we offer the finest cameras and photography equipment to help you capture life's most precious moments. Our products are curated to meet the needs of both amateur and professional photographers, ensuring you have the best tools at your disposal.</p>
             </div>
             <div class="about-image">
                 <img src="https://via.placeholder.com/600x400" alt="About Us">
             </div>
         </div>
+
     </div>
+    <!-- </div> -->
 
     <div id="products" class="container">
         <h2 style="color: #fff;">Photography Accessories</h2>
         <div class="scroll-btn prev-btn">&lt;</div>
         <div class="product-scroll-wrapper">
             <div class="product-scroll">
-                <!-- Add your product divs here -->
+        <div class="product">
+            <img src="assets/pexels-pixabay-414781.jpg" alt="Camera Lens">
+            <h3>Professional Camera Lens</h3>
+            <p>₹7,500</p>
+            <p class="description">High-quality lens for capturing stunning images with clarity and detail.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
             </div>
         </div>
-        <div class="scroll-btn next-btn">&gt;</div>
+        
+        <div class="product">
+            <img src="assets/pexels-pok-rie-33563-305086.jpg" alt="Tripod">
+            <h3>Professional Tripod</h3>
+            <p>₹3,500</p>
+            <p class="description">Sturdy tripod for stable shots and long exposure photography.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="assets/bag.jpg" alt="Camera Bag">
+            <h3>Camera Bag</h3>
+            <p>₹500</p>
+            <p class="description">Durable and spacious bag to carry your camera and accessories.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Strap">
+            <h3>Camera Strap</h3>
+            <p>₹150</p>
+            <p class="description">Comfortable and adjustable strap for carrying your camera.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Memory Card">
+            <h3>Memory Card</h3>
+            <p>₹200</p>
+            <p class="description">High-speed memory card for storing your photos and videos.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Cleaning Kit">
+            <h3>Camera Cleaning Kit</h3>
+            <p>₹300</p>
+            <p class="description">Essential kit for keeping your camera and lenses clean and dust-free.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Remote Shutter">
+            <h3>Camera Remote Shutter</h3>
+            <p>₹100</p>
+            <p class="description">Wireless remote shutter for convenient hands-free photography.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/200x150" alt="Camera Lens Cleaner">
+            <h3>Camera Lens Cleaner</h3>
+            <p>₹50</p>
+            <p class="description">Compact and portable lens cleaner for maintaining optical clarity.</p>
+            <div class="options">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
     </div>
+    <div class="scroll-btn next-btn">&gt;</div>
+</div>
+    
 
+    <div class="scroll-btn next-btn">&gt;</div>
+    </div>
     <div id="contact" class="contact-section">
         <h2>Contact Us</h2>
         <p>If you have any questions, feel free to reach out to us at @captureIt.in</p>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
 
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('active');
-            });
-        });
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+
     </script>
 </body>
 </html>
