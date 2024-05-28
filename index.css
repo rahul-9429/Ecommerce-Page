@@ -3,18 +3,18 @@
 .next-btn {
     display: none;
 }
-
 .menu-toggle {
-    display: block;
+    display: none;  
     cursor: pointer;
 }
-
 .bar {
     width: 25px;
     height: 3px;
     background-color: #ffffff;
     margin: 5px 0;
 }
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-scroll {
@@ -49,10 +49,11 @@
     .next-btn {
         right: 10px;
     }
-     .menu {
-        display: none; /* Hide the menu by default on small screens */
+    .menu {
+        display: none;  
         flex-direction: column;
         gap: 10px;
+       
         position: absolute;
         top: 100%;
         left: 0;
@@ -60,10 +61,10 @@
     }
 
     .menu.active {
-        display: flex; /* Show the menu when active */
+        display: flex;  
     }
-
     .menu-toggle {
+        display: block;  
         margin-right: 20px;
     }
     .about-section .about-content { 
