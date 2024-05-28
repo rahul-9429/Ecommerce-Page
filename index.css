@@ -66,6 +66,9 @@
     .menu-toggle {
         margin-right: 20px;
     }
+    .about-section .about-content { 
+        flex-direction: column !important;
+    }
 }
 
 /* Other CSS styles... */
