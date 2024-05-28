@@ -3,6 +3,17 @@
 .next-btn {
     display: none;
 }
+.menu-toggle {
+    display: none;  
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -38,6 +49,25 @@
     .next-btn {
         right: 10px;
     }
+    .menu {
+        display: none;  
+        flex-direction: column;
+        gap: 10px;
+       
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex; /* Show the menu when active */
+    }
+    .menu-toggle {
+        display: block; /* Show the toggle on small screens */
+        margin-right: 20px;
+    }
+
 }
 
 /* Other CSS styles... */
@@ -69,6 +99,7 @@ header .logo h1 {
 }
 
 header .menu {
+     
     display: flex;
     gap: 20px;
 }
